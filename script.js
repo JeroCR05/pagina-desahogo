@@ -122,7 +122,7 @@ function openModal(text, imageSrc, isCertificate = false) {
     humorTexto.innerHTML = text;
     if (isCertificate) {
         modalTitle.textContent = "Certificado Oficial de Supervivencia";
-        modalTitle.classList.remove('hidden');
+        modalTitle.style.display = 'block';
         modalImg.style.display = 'none'; // ocultar diablo en cert
         modalBox.classList.add('certificate-style');
         
@@ -134,7 +134,7 @@ function openModal(text, imageSrc, isCertificate = false) {
         `;
     } else {
         modalImg.src = imageSrc;
-        modalTitle.classList.add('hidden');
+        modalTitle.style.display = 'none';
         modalImg.style.display = 'inline-block';
         modalBox.classList.remove('certificate-style');
     }
