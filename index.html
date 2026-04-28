@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espacio de Desahogo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="desahogo.css?v=5">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <img src="diablito_chistoso.png" alt="Diablito" class="main-diablito" id="main-diablo-img">
+            <h1 class="glow-text">Bienvenido al infierno</h1>
+            <p class="subtitle">Un espacio seguro para desahogarte del agobio del mundo sin ser juzgado.</p>
+            <p class="secret-warning">🔒 Todos los secretos aquí tratados se quedan entre el infierno y la tierra.</p>
+        </header>
+
+        <section class="vent-section">
+            <div class="flex-between">
+                <label for="desahogo">¿Qué te atormenta hoy?</label>
+                <button id="btn-consejo" class="btn-secondary" title="¿No sabes qué hacer?">😈 Pedir consejo</button>
+            </div>
+            
+            <div class="drama-slider-container">
+                <label for="drama-level" class="drama-label">Nivel de drama: <span id="drama-value">5</span>/10 <span id="drama-text"> - Neutral</span> <span id="drama-emoji">😐</span></label>
+                <input type="range" id="drama-level" class="drama-slider" min="1" max="10" value="5">
+            </div>
+
+            <div id="textarea-wrapper" class="textarea-wrapper">
+                <img src="diablito_comiendo2.png" id="eating-devil" class="eating-devil" alt="Diablo Comiendo">
+                <textarea id="desahogo" name="desahogo" placeholder="Escribe tu desahogo. (Tip: Si tienes rabia, dale varios clics rápidos a esta caja)"></textarea>
+                <div id="crack-overlay"></div>
+            </div>
+
+            <p class="instruction-text">Elige tu método de destrucción:</p>
+            <div class="action-buttons">
+                <button id="btn-burn" class="btn-action burn-btn">🔥 Quemar</button>
+                <button id="btn-shred" class="btn-action shred-btn">✂️ Triturar</button>
+                <button id="btn-feed" class="btn-action feed-btn">🌮 Alimentarlo</button>
+            </div>
+        </section>
+
+        <p id="success-msg" class="hidden-msg">Tus pensamientos se han esfumado. Respira profundo.</p>
+        <button id="btn-cert" class="btn-secondary hidden-cert">📜 Obtener Certificado</button>
+    </main>
+
+    <!-- Modal General (Consejos, Humor y Certificados) -->
+    <div id="humor-modal" class="humor-modal">
+        <div class="modal-content" id="modal-box">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <div class="diablito-container">
+                <img src="diablito_riendo.png" alt="Diablito" class="diablito-img" id="modal-img">
+            </div>
+            <h2 id="modal-title" class="hidden"></h2>
+            <p id="humor-texto" class="humor-texto-modal"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
