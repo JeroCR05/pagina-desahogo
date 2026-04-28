@@ -88,6 +88,22 @@ body.earthquake {
     z-index: 10;
 }
 
+.page-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 70px;
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(255, 69, 0, 0.6));
+    animation: floatLogo 3s ease-in-out infinite;
+    z-index: 100;
+}
+
+@keyframes floatLogo {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-5px) rotate(5deg); }
+}
+
 @keyframes breatheLight {
 
     0%,
